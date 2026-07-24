@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import {
   ChevronDown,
-  GraduationCap,
+  Code2,
   Briefcase,
   Users,
   Smartphone,
@@ -26,17 +26,17 @@ interface DropdownItem {
 
 const servicesItems: DropdownItem[] = [
   {
-    title: 'Training',
+    title: 'Software Solutions',
     href: '/services/training',
-    icon: GraduationCap,
+    icon: Code2,
   },
   {
-    title: 'Consulting',
+    title: 'IT Consulting',
     href: '/services/consulting',
     icon: Briefcase,
   },
   {
-    title: 'Outsourcing',
+    title: 'IT Outsourcing',
     href: '/services/outsourcing',
     icon: Users,
   },
@@ -178,7 +178,7 @@ export default function Header() {
                           <div className="ml-3">
                             <div className="text-sm font-bold text-[#2D2D2D] group-hover/item:text-[#1B4F8C] flex items-center gap-1">
                               {item.title}
-                              <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 text-[#E8752C]" />
+                              <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 text-[#0047AB]" />
                             </div>
 
                           </div>
@@ -228,7 +228,7 @@ export default function Header() {
                             )}
                           </div>
                           <div className="ml-3">
-                            <div className="text-sm font-bold text-[#2D2D2D] group-hover/item:text-[#E8752C] flex items-center gap-1">
+                            <div className="text-sm font-bold text-[#2D2D2D] group-hover/item:text-[#101585] flex items-center gap-1">
                               {item.title}
                               <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200 text-[#1B4F8C]" />
                             </div>
@@ -255,7 +255,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-[#F2A93B] to-[#E8752C] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2"
+              className="bg-gradient-to-r from-[#0047AB] to-[#101585] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-cobalt-500/25 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2"
             >
               <span>Get In Touch</span>
               <ArrowRight className="w-4 h-4" />
@@ -302,13 +302,13 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="space-y-1 pl-2 border-l-2 border-[#E8752C]/20 my-2">
+          <div className="space-y-1 pl-2 border-l-2 border-[#101585]/20 my-2">
             <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider py-1">Our Product</span>
             {productItems.map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className="block py-1.5 text-sm font-medium text-gray-700 hover:text-[#E8752C]"
+                className="block py-1.5 text-sm font-medium text-gray-700 hover:text-[#101585]"
               >
                 • {item.title}
               </Link>
@@ -325,7 +325,7 @@ export default function Header() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="w-full bg-gradient-to-r from-[#F2A93B] to-[#E8752C] text-white text-center font-bold px-4 py-3 rounded-xl block shadow-md"
+              className="w-full bg-gradient-to-r from-[#0047AB] to-[#101585] text-white text-center font-bold px-4 py-3 rounded-xl block shadow-md"
             >
               Get In Touch
             </Link>

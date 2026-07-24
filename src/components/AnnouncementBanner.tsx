@@ -77,7 +77,7 @@ export default function AnnouncementBanner() {
               </span>
               <Link 
                 href={item.href}
-                className="bg-[#F2A93B] hover:bg-[#E8752C] text-[#2D2D2D] font-semibold text-xs px-2.5 py-0.5 rounded-full transition-all duration-200 inline-flex items-center gap-1 shadow-sm hover:text-white"
+                className="bg-[#0047AB] hover:bg-[#101585] text-white font-semibold text-xs px-2.5 py-0.5 rounded-full transition-all duration-200 inline-flex items-center gap-1 shadow-sm"
               >
                 <span>{item.linkText}</span>
               </Link>

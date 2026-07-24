@@ -46,7 +46,7 @@ export default function FloatingActions() {
         <Link
           ref={qtranRef}
           href="/products/q-tran"
-          className="w-13 h-13 rounded-full bg-white p-1 border-2 border-[#E8752C] flex items-center justify-center shadow-lg shadow-orange-500/30 hover:scale-110 transition-transform duration-200 group relative overflow-hidden"
+          className="w-13 h-13 rounded-full bg-white p-1 border-2 border-[#0047AB] flex items-center justify-center shadow-lg shadow-[#0047AB]/30 hover:scale-110 transition-transform duration-200 group relative overflow-hidden"
           aria-label="Get Q-Tran App"
         >
           <div className="relative w-full h-full rounded-full overflow-hidden">
@@ -58,8 +58,8 @@ export default function FloatingActions() {
             />
           </div>
           <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 z-10">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-orange-500 border border-white"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#0047AB] border border-white"></span>
           </span>
         </Link>
       </div>

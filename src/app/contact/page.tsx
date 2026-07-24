@@ -27,7 +27,7 @@ export default function ContactPage() {
       {/* Header Banner */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#F2A93B]">
+          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Connect with Our Experts</span>
           </div>
@@ -47,7 +47,7 @@ export default function ContactPage() {
           {/* Contact Details Block */}
           <div className="lg:col-span-5 space-y-8 card-left">
             <div className="space-y-4">
-              <span className="text-xs uppercase font-extrabold tracking-widest text-[#E8752C]">
+              <span className="text-xs uppercase font-extrabold tracking-widest text-[#101585]">
                 Get In Touch Direct
               </span>
               <h2 className="text-3xl font-black text-[#2D2D2D]">
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
               {/* Office Location & Hours */}
               <div className="flex items-start space-x-4 pt-4 border-t border-gray-100">
-                <div className="w-12 h-12 rounded-2xl bg-[#F2A93B]/15 text-[#E8752C] flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-[#0047AB]/10 text-[#0047AB] flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
             
             {/* Left Promo Text */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-[#F2A93B] text-[#2D2D2D] font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 bg-[#0047AB] text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                 <Smartphone className="w-4 h-4" />
                 <span>Featured App Promo</span>
               </div>
@@ -153,15 +153,15 @@ export default function ContactPage() {
 
               <div className="space-y-2 pt-2">
                 <div className="flex items-center space-x-3 text-sm font-semibold text-white/90">
-                  <CheckCircle2 className="w-5 h-5 text-[#F2A93B]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#0047AB]" />
                   <span>Complete Leadership & Finishing School Modules</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm font-semibold text-white/90">
-                  <CheckCircle2 className="w-5 h-5 text-[#F2A93B]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#0047AB]" />
                   <span>Interactive Quizzes & Certificate Verification</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm font-semibold text-white/90">
-                  <CheckCircle2 className="w-5 h-5 text-[#F2A93B]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#0047AB]" />
                   <span>Real-Time Performance Dashboard for HR & Management</span>
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function ContactPage() {
                       <div className="text-[10px] text-blue-200">Current Module</div>
                       <div className="text-xs font-bold text-white">Leadership & Management</div>
                       <div className="w-full bg-white/20 h-1.5 rounded-full overflow-hidden mt-1">
-                        <div className="bg-[#F2A93B] h-full w-[78%]"></div>
+                        <div className="bg-[#0047AB] h-full w-[78%]"></div>
                       </div>
                     </div>
 
@@ -225,7 +225,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="bg-[#F2A93B] text-[#2D2D2D] font-extrabold text-xs py-2 rounded-xl text-center shadow-md">
+                  <div className="bg-[#101585] text-white font-extrabold text-xs py-2 rounded-xl text-center shadow-md">
                     Enroll in New Course →
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export default function ContactPage() {
           </div>
 
           <div className="h-64 rounded-2xl bg-gradient-to-r from-slate-100 to-blue-50 border border-gray-200 flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
-            <MapPin className="w-10 h-10 text-[#E8752C] animate-bounce" />
+            <MapPin className="w-10 h-10 text-[#0047AB] animate-bounce" />
             <div>
               <h4 className="text-base font-extrabold text-[#1B4F8C]">RK&apos;s Brainstorm Headquarters</h4>
               <p className="text-xs text-[#6B7280] max-w-md mt-1">

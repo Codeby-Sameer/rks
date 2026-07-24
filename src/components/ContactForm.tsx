@@ -42,7 +42,7 @@ export default function ContactForm() {
           </div>
           <h4 className="text-xl font-bold text-[#1B4F8C]">Thank You, {formData.name}!</h4>
           <p className="text-sm text-[#6B7280] max-w-sm mx-auto">
-            Your message regarding <span className="font-semibold text-[#E8752C]">{formData.service}</span> has been received. Our team will call or email you shortly.
+            Your message regarding <span className="font-semibold text-[#101585]">{formData.service}</span> has been received. Our team will call or email you shortly.
           </p>
           <button
             onClick={() => {
@@ -135,7 +135,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#F2A93B] to-[#E8752C] text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2 text-base"
+            className="w-full bg-gradient-to-r from-[#0047AB] to-[#101585] text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-lg hover:shadow-[#0047AB]/30 hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2 text-base"
           >
             <span>Submit Message</span>
             <Send className="w-4 h-4" />

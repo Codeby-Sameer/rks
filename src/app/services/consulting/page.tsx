@@ -8,40 +8,38 @@ import {
   Search, 
   ArrowRight, 
   CheckCircle2, 
-  ShieldCheck, 
-  Award,
   Sparkles
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Consulting Services | RK's Brainstorm",
-  description: "Strategic Executive Search & Selection, Middle Management Hiring, and Project Based Hiring solutions backed by 3+ years of domain expertise.",
+  title: "IT Consulting & Tech Staffing | RK's Brainstorm",
+  description: "Enterprise IT strategy consulting, tech leadership search, dedicated developer staffing, and product architecture consulting.",
 };
 
 const consultingPillars = [
   {
-    title: 'Executive Search & Selection',
-    desc: 'Targeted C-suite, Board level, and Senior Director recruitment across technology, manufacturing, healthcare, and financial services.',
+    title: 'Tech Leadership & CTO Search',
+    desc: 'Targeted C-suite, CTO, VP of Engineering, and Tech Director recruitment for digital-first enterprises and high-growth software teams.',
     icon: Search,
-    items: ['Confidential Leadership Sourcing', 'C-Suite & VP Placement', 'Board-Level Talent Assessment', 'Global & Regional Search'],
+    items: ['Confidential Executive Sourcing', 'CTO & Engineering Leadership Placement', 'Technical Competency Evaluation', 'Global & Local Tech Search'],
   },
   {
-    title: 'Middle Management Hiring',
-    desc: 'Connecting clients with experienced operational leaders, department heads, and managers who drive daily Business Unit performance.',
+    title: 'IT Strategy & Product Consulting',
+    desc: 'Strategic technology advisory defining product roadmaps, cloud infrastructure transitions, data systems architecture, and scalability plans.',
     icon: Target,
-    items: ['Functional Head Recruitment', 'Domain-Specific Managerial Search', 'Scalable Middle Management Pools', 'Competency Mapping'],
+    items: ['Digital Transformation Roadmaps', 'Cloud Architecture Strategy', 'Software Stack Evaluations', 'Agile Product Lifecycle Advice'],
   },
   {
-    title: 'Project Based Hiring',
-    desc: 'Rapid deployment of specialized project teams, technical consultants, and ramp-up hiring for strategic client initiatives.',
+    title: 'Dedicated Developer Staffing',
+    desc: 'Rapid placement of expert React, Next.js, Node.js developers, mobile engineers, full-stack architects, and UI/UX designers.',
     icon: Briefcase,
-    items: ['Turnkey Project Staffing', 'Rapid Capacity Ramp-Up', 'Specialized Skill Clusters', 'Short & Long-Term Engagements'],
+    items: ['Contract-to-Hire Staffing', 'Specialized Tech Dev Clusters', 'Remote & On-Site Engineering Pools', 'Flexible Project Teams'],
   },
   {
-    title: 'Integrated Leadership Suite',
-    desc: 'Comprehensive talent consulting aligning organizational strategy, leadership succession, and specialized industry recruitment.',
+    title: 'Enterprise Tech Consulting',
+    desc: 'Aligning business workflows, CRM/ERP solutions, custom software selection, and legacy modernization consulting.',
     icon: Users,
-    items: ['Leadership Pipeline Planning', 'Sector-Specific Advisory', 'Market Intelligence & Mapping', 'Retained & Contingent Models'],
+    items: ['Legacy Application Modernization', 'ERP & Custom software advice', 'Scalability Audits & Solutions', 'Workflow Automation Audits'],
   },
 ];
 
@@ -52,15 +50,15 @@ export default function ConsultingPage() {
       {/* Hero Header */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#F2A93B]">
+          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
-            <span>Strategic Leadership & Talent Solutions</span>
+            <span>Enterprise IT Strategy & Talent</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black">
-            Executive Search & Consulting
+            IT Consulting & Tech Staffing
           </h1>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            We partner with our clients to expand their business potential by providing solutions in Executive Search & Selection, Middle Management Hiring, Project Based Hiring, and Recruitment Process Outsourcing.
+            Partnering with companies to accelerate technical engineering capacity, scale tech stacks, and source elite software leadership globally.
           </p>
         </div>
       </section>
@@ -68,14 +66,14 @@ export default function ConsultingPage() {
       {/* Main Copy Focus */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#F7F8FA] rounded-3xl p-8 sm:p-12 border border-gray-200/80 card-fade space-y-4">
-          <span className="text-xs uppercase font-extrabold tracking-widest text-[#E8752C]">
-            Domain Expertise & Sector Reach
+          <span className="text-xs uppercase font-extrabold tracking-widest text-[#101585]">
+            Enterprise Solutions Delivery
           </span>
           <h2 className="text-3xl font-black text-[#2D2D2D]">
-            3+ Years of Deep Domain Expertise
+            3+ Years of Technical Consulting Expertise
           </h2>
           <p className="text-base text-[#6B7280] leading-relaxed text-justify">
-            With three years of deep domain expertise, we have successfully delivered solutions across global and local, industry-specific demands. Our strength lies in our multifaceted team of professional consultants, highly specialized and experienced in the industries/sectors they serve — associated with top talent capable of harnessing new pools of potential.
+            RK&apos;s Brainstorm delivers targeted technology consulting and software talent solutions. Our team of senior tech consultants and specialized developers helps brands build their technology foundation, modernize infrastructure, and scale engineering outputs to unlock new potential.
           </p>
         </div>
       </section>
@@ -87,7 +85,7 @@ export default function ConsultingPage() {
             Services Portfolio
           </span>
           <h2 className="text-3xl font-black text-[#2D2D2D]">
-            Consulting & Executive Search Solutions
+            IT Consulting & Leadership Solutions
           </h2>
         </div>
 
@@ -98,12 +96,12 @@ export default function ConsultingPage() {
             return (
               <div key={pillar.title} className={`${anim} bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all space-y-6`}>
                 <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 rounded-2xl bg-[#F2A93B]/15 text-[#E8752C] flex items-center justify-center shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-[#0047AB]/10 text-[#0047AB] flex items-center justify-center shrink-0">
                     <Icon className="w-7 h-7" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#2D2D2D]">{pillar.title}</h3>
-                    <p className="text-xs text-[#1B4F8C] font-semibold">Leadership Practice</p>
+                    <p className="text-xs text-[#1B4F8C] font-semibold">Tech Consulting</p>
                   </div>
                 </div>
 
@@ -127,15 +125,15 @@ export default function ConsultingPage() {
 
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h2 className="text-3xl font-black text-[#2D2D2D]">Discuss Your Leadership Hiring Needs</h2>
+        <h2 className="text-3xl font-black text-[#2D2D2D]">Connect with a Technology Advisor</h2>
         <p className="text-sm text-[#6B7280] max-w-xl mx-auto">
-          Connect with our professional search consultants to expand your executive and middle-management talent pool.
+          Contact our consulting experts to discuss system architecture, technology frameworks, or high-caliber developer staffing options.
         </p>
         <Link
           href="/contact"
           className="bg-[#1B4F8C] hover:bg-[#153f70] text-white font-bold px-8 py-3.5 rounded-full shadow-lg inline-flex items-center gap-2"
         >
-          <span>Connect with Executive Consultants</span>
+          <span>Connect with Tech Consultants</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
       </section>

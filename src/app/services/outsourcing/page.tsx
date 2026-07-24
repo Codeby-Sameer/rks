@@ -2,41 +2,38 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { 
-  Users, 
-  Layers, 
   Workflow, 
+  Layers, 
   Globe2, 
-  ArrowRight, 
-  CheckCircle2, 
-  ShieldCheck, 
   Building,
+  ArrowRight, 
   Sparkles
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Outsourcing Services | RK's Brainstorm - RPO Solutions",
-  description: "End-to-end Recruitment Process Outsourcing (RPO) and integrated workforce management delivering global and local industry solutions.",
+  title: "IT Outsourcing & Tech RPO | RK's Brainstorm",
+  description: "Enterprise IT outsourcing, dedicated offshore development squads, technology RPO, and managed engineering teams.",
 };
 
-const rpoBenefits = [
+const outsourcingBenefits = [
   {
-    title: 'End-to-End RPO Delivery',
-    desc: 'Complete ownership of your recruitment lifecycle — from candidate sourcing and screening to onboarding and BU compliance.',
+    title: 'Full-Lifecycle Tech RPO',
+    desc: 'Complete ownership of tech recruitment — from candidate sourcing, coding assessments, and technical screening to onboarding and BU compliance.',
     icon: Workflow,
   },
   {
-    title: 'Integrated Leadership Suite',
-    desc: 'Harmonizing executive hiring, volume staffing, and qualitative training under a single SLA-driven framework.',
+    title: 'Dedicated Offshore Squads',
+    desc: 'Assembling and managing high-performing software development and testing teams under a single SLA-driven delivery framework.',
     icon: Layers,
   },
   {
-    title: 'Global & Local Flexibility',
-    desc: 'Scalable deployment models catering to MNC global offshore hubs as well as local Indian enterprise demands.',
+    title: 'Global Tech Delivery',
+    desc: 'Scalable software outsourcing and support structures catering to global MNC offshore units as well as domestic Indian enterprises.',
     icon: Globe2,
   },
   {
-    title: 'Domain-Specialized Staffing',
-    desc: 'Pre-screened talent pools prepared for immediate onboarding across IT, engineering, operations, and management roles.',
+    title: 'Domain-Specialized Talent Pools',
+    desc: 'Access to immediate, pre-screened developers, engineers, and tech managers across frontend, backend, cloud, and QA domains.',
     icon: Building,
   },
 ];
@@ -48,15 +45,15 @@ export default function OutsourcingPage() {
       {/* Hero Header */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#F2A93B]">
+          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
-            <span>Integrated RPO & Workforce Solutions</span>
+            <span>Managed Tech Teams & RPO</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black">
-            Recruitment Process Outsourcing
+            IT Outsourcing & Tech RPO
           </h1>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Delivering Recruitment Process Outsourcing (RPO) through an integrated suite of leadership services tailored for global and local industry-specific demands.
+            Accelerate your engineering capacity with managed outsourcing, offshore software developer hubs, and high-impact tech recruitment process outsourcing.
           </p>
         </div>
       </section>
@@ -65,13 +62,13 @@ export default function OutsourcingPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#F7F8FA] rounded-3xl p-8 sm:p-12 border border-gray-200/80 card-fade space-y-4">
           <span className="text-xs uppercase font-extrabold tracking-widest text-[#2CA8A4]">
-            Integrated Leadership & Staffing Suite
+            Managed Offshore & RPO Operations
           </span>
           <h2 className="text-3xl font-black text-[#2D2D2D]">
-            Global & Local Industry-Specific Delivery
+            Global & Domestic Software Sourcing Delivery
           </h2>
           <p className="text-base text-[#6B7280] leading-relaxed text-justify">
-            With three years of deep domain expertise, RK&apos;s Brainstorm provides end-to-end RPO solutions that eliminate recruitment bottlenecks. Our multifaceted team of consultants manages candidate pipelines, qualitative screening, and BU alignment so you can focus on core business strategy.
+            With three years of deep domain expertise in recruitment and software ecosystems, RK&apos;s Brainstorm manages end-to-end tech outsourcing. Our team takes care of hiring pipelines, rigorous tech screening, and resource management so your internal engineering leadership can focus on core product delivery.
           </p>
         </div>
       </section>
@@ -79,16 +76,16 @@ export default function OutsourcingPage() {
       {/* RPO Benefits Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-2xl mx-auto space-y-3 card-fade">
-          <span className="text-xs uppercase font-extrabold tracking-widest text-[#E8752C]">
-            Why Partner with RK&apos;s Brainstorm RPO
+          <span className="text-xs uppercase font-extrabold tracking-widest text-[#101585]">
+            Why Partner with RK&apos;s Brainstorm Outsourcing
           </span>
           <h2 className="text-3xl font-black text-[#2D2D2D]">
-            Comprehensive Outsourcing Advantages
+            SLA-Driven Technical Sourcing Advantages
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {rpoBenefits.map((item, idx) => {
+          {outsourcingBenefits.map((item, idx) => {
             const Icon = item.icon;
             const anim = idx % 2 === 0 ? 'card-left' : 'card-right';
             return (
@@ -108,15 +105,15 @@ export default function OutsourcingPage() {
 
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h2 className="text-3xl font-black text-[#2D2D2D]">Transform Your Talent Acquisition</h2>
+        <h2 className="text-3xl font-black text-[#2D2D2D]">Scale Your Technology Capacity</h2>
         <p className="text-sm text-[#6B7280] max-w-xl mx-auto">
-          Contact our outsourcing specialists to design a customized RPO model for your organization.
+          Partner with our IT outsourcing consultants to set up a dedicated offshore development center or customize a tech RPO pipeline.
         </p>
         <Link
           href="/contact"
-          className="bg-gradient-to-r from-[#F2A93B] to-[#E8752C] text-white font-bold px-8 py-3.5 rounded-full shadow-lg inline-flex items-center gap-2"
+          className="bg-gradient-to-r from-[#0047AB] to-[#101585] text-white font-bold px-8 py-3.5 rounded-full shadow-lg inline-flex items-center gap-2"
         >
-          <span>Request RPO Consultation</span>
+          <span>Request IT Outsourcing Consultation</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
       </section>

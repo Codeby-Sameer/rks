@@ -8,7 +8,6 @@ import {
   Database, 
   Users2, 
   LineChart, 
-  ShieldAlert,
   Sparkles
 } from 'lucide-react';
 
@@ -20,17 +19,17 @@ export const metadata: Metadata = {
 const bmsModules = [
   {
     title: 'Resource & Talent Allocation',
-    desc: 'Assign pre-groomed candidates and internal consultants to client projects based on skills, availability, and BU demands.',
+    desc: 'Assign developers, consultants, and IT engineering resources to client projects based on skills, availability, and BU demands.',
     icon: Users2,
   },
   {
     title: 'Executive SLA & KPI Analytics',
-    desc: 'Real-time dashboards measuring time-to-hire, training completion rates, and client satisfaction metrics.',
+    desc: 'Real-time dashboards measuring time-to-hire, software sprint completions, and client satisfaction metrics.',
     icon: LineChart,
   },
   {
     title: 'Contract & Client Portal',
-    desc: 'Centralized repository managing executive search agreements, RPO scope documents, and billing milestones.',
+    desc: 'Centralized repository managing software developer assignments, IT outsourcing agreements, and billing milestones.',
     icon: Database,
   },
 ];
@@ -42,7 +41,7 @@ export default function BMSPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#F2A93B]">
+          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Enterprise Business Management</span>
           </div>
@@ -73,10 +72,10 @@ export default function BMSPage() {
               <span>Enterprise Resource & Project Engine</span>
             </div>
             <h2 className="text-3xl font-black text-[#2D2D2D]">
-              Streamlining Consulting & Outsourcing Operations
+              Streamlining Tech Projects & Outsourcing Operations
             </h2>
             <p className="text-base text-[#6B7280] leading-relaxed">
-              BMS (Business Management System) is engineered specifically to support complex organizational demands across Executive Search & Selection, Middle Management Hiring, and RPO projects.
+              BMS (Business Management System) is engineered specifically to support custom software projects, cloud management tasks, developer staffing pools, and IT outsourcing operations.
             </p>
             <p className="text-base text-[#6B7280] leading-relaxed">
               By consolidating candidate pipelines, client project deliverables, and consultant assignments into a unified dashboard, BMS ensures zero communication gaps and transparent SLA reporting.
@@ -85,11 +84,11 @@ export default function BMSPage() {
             <div className="space-y-3 pt-2">
               <div className="flex items-center space-x-3 text-sm font-bold text-[#2D2D2D]">
                 <CheckCircle2 className="w-5 h-5 text-[#2CA8A4]" />
-                <span>Seamless integration with Q-Tran training metrics</span>
+                <span>Seamless integration with Q-Tran skill testing metrics</span>
               </div>
               <div className="flex items-center space-x-3 text-sm font-bold text-[#2D2D2D]">
                 <CheckCircle2 className="w-5 h-5 text-[#2CA8A4]" />
-                <span>Automated candidate matching against BU requirements</span>
+                <span>Automated developer matching against BU requirements</span>
               </div>
               <div className="flex items-center space-x-3 text-sm font-bold text-[#2D2D2D]">
                 <CheckCircle2 className="w-5 h-5 text-[#2CA8A4]" />
@@ -111,7 +110,7 @@ export default function BMSPage() {
               <div className="pt-2">
                 <Link
                   href="/contact?demo=bms#form"
-                  className="w-full bg-gradient-to-r from-[#F2A93B] to-[#E8752C] text-white font-extrabold py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
+                  className="w-full bg-gradient-to-r from-[#0047AB] to-[#101585] text-white font-extrabold py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
                 >
                   <span>Request Live Product Demo</span>
                   <ArrowRight className="w-4 h-4" />
@@ -126,7 +125,7 @@ export default function BMSPage() {
       {/* Modules Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-2xl mx-auto space-y-3 card-fade">
-          <span className="text-xs uppercase font-extrabold tracking-widest text-[#E8752C]">
+          <span className="text-xs uppercase font-extrabold tracking-widest text-[#101585]">
             Core Modules
           </span>
           <h2 className="text-3xl font-black text-[#2D2D2D]">
