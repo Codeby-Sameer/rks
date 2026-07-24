@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1B4F8C;
+  --color-brand-orange: #F2A93B;
+  --color-brand-orange-deep: #E8752C;
+  --color-brand-teal: #2CA8A4;
+  --color-neutral-dark: #2D2D2D;
+  --color-neutral-gray: #6B7280;
+  --color-neutral-light: #F7F8FA;
+}
+
+@layer utilities {
+  /* Base hidden states */
+  .card-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  }
+  .card-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  }
+  .card-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease-in, transform 0.9s ease-in;
+  }
+  .card-fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+  }
+  .card-zoom {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  }
+
+  /* Visible state — applied by GSAP/IntersectionObserver when in view */
+  .card-left.is-visible,
+  .card-right.is-visible,
+  .card-fade.is-visible,
+  .card-fade-up.is-visible,
+  .card-zoom.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Custom scrollbar and smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #2D2D2D;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel-dark {
+  background: rgba(27, 79, 140, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text utility */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #F2A93B 0%, #E8752C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #1B4F8C 0%, #2CA8A4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom button gradient */
+.btn-gradient-orange {
+  background: linear-gradient(135deg, #F2A93B 0%, #E8752C 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-orange:hover {
+  background: linear-gradient(135deg, #E8752C 0%, #d16118 100%);
+  box-shadow: 0 10px 25px -5px rgba(232, 117, 44, 0.4);
+  transform: translateY(-2px);
+}
