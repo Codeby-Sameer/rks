@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
-import { GraduationsIcon, Phone, Smartphone, ArrowRight, Sparkles } from 'lucide-react';
+import { GraduationCap, Phone, Smartphone, ArrowRight, Sparkles } from 'lucide-react';
 
 const bannerItems = [
   {

@@ -2,8 +2,9 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
-import { MessageCircle, Smartphone } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 export default function FloatingActions() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,13 +46,20 @@ export default function FloatingActions() {
         <Link
           ref={qtranRef}
           href="/products/q-tran"
-          className="w-13 h-13 rounded-full bg-gradient-to-br from-[#F2A93B] to-[#E8752C] text-white flex items-center justify-center shadow-lg shadow-orange-500/30 hover:scale-110 transition-transform duration-200 group relative"
+          className="w-13 h-13 rounded-full bg-white p-1 border-2 border-[#E8752C] flex items-center justify-center shadow-lg shadow-orange-500/30 hover:scale-110 transition-transform duration-200 group relative overflow-hidden"
           aria-label="Get Q-Tran App"
         >
-          <Smartphone className="w-6 h-6" />
-          <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-teal-400 border border-white"></span>
+          <div className="relative w-full h-full rounded-full overflow-hidden">
+            <Image 
+              src="/q-tranlogo.jpg" 
+              alt="Q-Tran Logo" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+          <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 z-10">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-orange-500 border border-white"></span>
           </span>
         </Link>
       </div>

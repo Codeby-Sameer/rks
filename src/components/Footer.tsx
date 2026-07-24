@@ -15,18 +15,16 @@ export default function Footer() {
           
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white p-1 shadow-md">
-                <Image 
-                  src="/logo.png" 
-                  alt="RK's Brainstorm Logo" 
-                  fill 
-                  className="object-contain p-1" 
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-black text-white tracking-tight">RK&apos;s Brainstorm</h3>
-                <p className="text-xs text-[#F2A93B] font-semibold tracking-wider uppercase">Training • Consulting • Outsourcing</p>
+            <Link href="/" className="inline-block group">
+              <div className="bg-white px-4 py-2 rounded-2xl shadow-lg inline-block group-hover:scale-105 transition-transform duration-300">
+                <div className="relative h-12 w-48">
+                  <Image 
+                    src="/rkslogo.png" 
+                    alt="RK's Brainstorm Logo" 
+                    fill 
+                    className="object-contain object-left" 
+                  />
+                </div>
               </div>
             </Link>
             <p className="text-sm text-blue-100/80 leading-relaxed max-w-md">
