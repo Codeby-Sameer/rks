@@ -2,17 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Smartphone, 
-  Download, 
-  CheckCircle2, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Smartphone,
+  CheckCircle2,
   Sparkles,
-  MessageCircle,
-  Clock,
-  Building2
+  MessageCircle
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -23,11 +20,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Header Banner */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Connect with Our Experts</span>
           </div>
@@ -43,7 +40,7 @@ export default function ContactPage() {
       {/* Main Contact Section: Form + Contact Details Block */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Contact Details Block */}
           <div className="lg:col-span-5 space-y-8 card-left">
             <div className="space-y-4">
@@ -60,7 +57,7 @@ export default function ContactPage() {
 
             {/* Structured Contact Details Card */}
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl space-y-6">
-              
+
               {/* Phone Numbers */}
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#1B4F8C]/10 text-[#1B4F8C] flex items-center justify-center shrink-0">
@@ -96,13 +93,12 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-xs uppercase font-bold text-gray-400">Corporate Location</h4>
+                  <h4 className="text-xs uppercase font-bold text-gray-400">Location</h4>
                   <p className="text-sm font-semibold text-[#2D2D2D] mt-0.5">
-                    Corporate Office Hub, India
+
+                    #407, Jain Sadguru Images Capital Park, Capital Pk Rd, VIP Hills, Madhapur, Hyderabad, Telangana 500081, India
                   </p>
-                  <p className="text-xs text-[#6B7280] mt-1">
-                    Monday – Saturday: 9:00 AM – 6:30 PM IST
-                  </p>
+
                 </div>
               </div>
 
@@ -133,9 +129,9 @@ export default function ContactPage() {
       {/* Q-Tran App Download Ad Section (Section 8 Spec) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="qtran-app">
         <div className="card-fade-up bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left Promo Text */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center space-x-2 bg-[#0047AB] text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
@@ -170,9 +166,11 @@ export default function ContactPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
                   href="#qtran-app"
-                  className="bg-black/40 hover:bg-black/60 border border-white/20 text-white font-bold px-6 py-3.5 rounded-2xl flex items-center space-x-3 transition-all hover:scale-105 shadow-md"
+                  className="bg-black hover:bg-neutral-900 border border-neutral-800 text-white font-bold px-6 py-3.5 rounded-2xl flex items-center space-x-3 transition-all hover:scale-105 shadow-md"
                 >
-                  <div className="w-7 h-7 flex items-center justify-center font-bold text-xl"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" className="w-6 h-6 text-white shrink-0">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.7-22.9-84.5-22.2-46.9 .7-90.2 27.3-114.3 69-49 84.8-12.5 210.9 34.8 279.1 23.2 33.3 50.1 70.3 86.1 69 34.9-1.4 48.2-22.7 90.4-22.7 42.3 0 54.3 22.7 90.4 22.1 36.6-.6 60.5-33.2 83.5-66.9 26.5-38.7 37.5-76.2 38-78.2-.8-.4-72.9-28-73.6-110.8zM290.4 96.1c16-19.4 26.7-46.4 23.8-73.4-23.2 1-51.5 15.5-68.2 34.9-14.5 16.8-27.2 44.1-23.8 70.7 25.8 2 52.3-12.8 68.2-32.2z" />
+                  </svg>
                   <div className="text-left">
                     <div className="text-[10px] uppercase text-gray-300">Download on the</div>
                     <div className="text-sm font-extrabold leading-tight">App Store</div>
@@ -180,10 +178,16 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="#qtran-app"
-                  className="bg-black/40 hover:bg-black/60 border border-white/20 text-white font-bold px-6 py-3.5 rounded-2xl flex items-center space-x-3 transition-all hover:scale-105 shadow-md"
+                  href="https://play.google.com/store/apps/details?id=com.qtran.learning&hl=en_IN"
+                  target='_blank'
+                  className="bg-black hover:bg-neutral-900 border border-neutral-800 text-white font-bold px-6 py-3.5 rounded-2xl flex items-center space-x-3 transition-all hover:scale-105 shadow-md"
                 >
-                  <div className="w-6 h-6 flex items-center justify-center text-emerald-400 font-bold text-lg">▶</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-6 h-6 shrink-0">
+                    <path fill="#FFC107" d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96z" />
+                    <path fill="#4CAF50" d="M10.627 11.49 7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055z" />
+                    <path fill="#03A9F4" d="M1 13.396V2.603L6.846 8z" />
+                    <path fill="#F44336" d="M1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27" />
+                  </svg>
                   <div className="text-left">
                     <div className="text-[10px] uppercase text-gray-300">GET IT ON</div>
                     <div className="text-sm font-extrabold leading-tight">Google Play</div>
@@ -194,43 +198,14 @@ export default function ContactPage() {
 
             {/* Right Phone Mockup Graphic */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-64 h-[440px] bg-gray-900 rounded-[40px] border-4 border-gray-700 shadow-2xl p-4 flex flex-col justify-between overflow-hidden group">
-                <div className="w-32 h-4 bg-gray-700 mx-auto rounded-full mb-2"></div>
-                
-                {/* Simulated Screen */}
-                <div className="bg-gradient-to-b from-[#1B4F8C] to-[#163f70] rounded-[28px] p-5 flex-1 text-white flex flex-col justify-between space-y-4">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                    <div className="flex items-center space-x-2">
-                      <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/20">
-                        <Image src="/q-tranlogo.jpg" alt="Q-Tran Logo" fill className="object-cover" />
-                      </div>
-                      <span className="font-extrabold text-sm">Q-Tran</span>
-                    </div>
-                    <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-bold">Active</span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="bg-white/10 p-3 rounded-xl space-y-1">
-                      <div className="text-[10px] text-blue-200">Current Module</div>
-                      <div className="text-xs font-bold text-white">Leadership & Management</div>
-                      <div className="w-full bg-white/20 h-1.5 rounded-full overflow-hidden mt-1">
-                        <div className="bg-[#0047AB] h-full w-[78%]"></div>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/10 p-3 rounded-xl space-y-1">
-                      <div className="text-[10px] text-blue-200">Finishing School Batch</div>
-                      <div className="text-xs font-bold text-white">Corporate Readiness Quiz</div>
-                      <div className="text-[10px] text-teal-300 font-semibold">Passed • 95% Score</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-[#101585] text-white font-extrabold text-xs py-2 rounded-xl text-center shadow-md">
-                    Enroll in New Course →
-                  </div>
-                </div>
-
-                <div className="w-10 h-1 bg-gray-600 mx-auto rounded-full mt-2"></div>
+              <div className="relative w-64 h-[400px] sm:w-72 sm:h-[430px] hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/q-tranmobile.png"
+                  alt="Q-Tran Mobile App"
+                  fill
+                  className="object-contain rounded-3xl"
+                  priority
+                />
               </div>
             </div>
 
@@ -240,25 +215,15 @@ export default function ContactPage() {
       </section>
 
       {/* Map / Address Placeholder Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 card-fade">
-        <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl space-y-6">
-          <div className="flex items-center space-x-3 text-[#1B4F8C]">
-            <Building2 className="w-6 h-6 text-[#2CA8A4]" />
-            <h3 className="text-xl font-bold text-[#2D2D2D]">Our Presence Across India</h3>
-          </div>
-
-          <div className="h-64 rounded-2xl bg-gradient-to-r from-slate-100 to-blue-50 border border-gray-200 flex flex-col items-center justify-center text-center p-6 space-y-3 relative overflow-hidden">
-            <MapPin className="w-10 h-10 text-[#0047AB] animate-bounce" />
-            <div>
-              <h4 className="text-base font-extrabold text-[#1B4F8C]">RK&apos;s Brainstorm Headquarters</h4>
-              <p className="text-xs text-[#6B7280] max-w-md mt-1">
-                Serving MNCs, corporate clients, and top educational institutions throughout major metropolitan hubs in India.
-              </p>
-            </div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#2CA8A4]">
-              <span>Phone: +91-8790008824</span> • <span>Email: info@rksbrainstorm.com</span>
-            </div>
-          </div>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 card-fade pb-16">
+        <div className="bg-white rounded-3xl p-4 border border-gray-100 shadow-xl overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.266451724517!2d78.38362417362671!3d17.446956483450492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91932c1669d5%3A0x8ac28f5ae7f1adf1!2sRK%E2%80%99S%20BRAINSTORM!5e0!3m2!1sen!2sus!4v1785086628415!5m2!1sen!2sus"
+            className="w-full h-[400px] sm:h-[450px] rounded-2xl border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
         </div>
       </section>
 

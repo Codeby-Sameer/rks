@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  Workflow, 
-  Layers, 
-  Globe2, 
+import {
+  Workflow,
+  Layers,
+  Globe2,
   Building,
-  ArrowRight, 
+  ArrowRight,
   Sparkles
 } from 'lucide-react';
 
@@ -41,11 +41,11 @@ const outsourcingBenefits = [
 export default function OutsourcingPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Hero Header */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Managed Tech Teams & RPO</span>
           </div>
@@ -89,7 +89,7 @@ export default function OutsourcingPage() {
             const Icon = item.icon;
             const anim = idx % 2 === 0 ? 'card-left' : 'card-right';
             return (
-              <div key={item.title} className={`${anim} bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all space-y-4`}>
+              <div key={item.title} className={`${anim} bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-4`}>
                 <div className="w-14 h-14 rounded-2xl bg-[#2CA8A4]/10 text-[#2CA8A4] flex items-center justify-center">
                   <Icon className="w-7 h-7" />
                 </div>

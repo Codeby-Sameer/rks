@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="relative bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Company Overview</span>
           </div>
@@ -74,8 +74,8 @@ export default function AboutPage() {
 
           <div className="lg:col-span-6 card-right">
             <div className="bg-gradient-to-br from-white to-[#F7F8FA] p-8 sm:p-10 rounded-3xl border border-gray-200/80 shadow-xl space-y-6 relative overflow-hidden">
-              <div className="w-16 h-16 relative rounded-2xl overflow-hidden shadow-md">
-                <Image src="/rkslogo.png" alt="RK's Brainstorm Logo" fill className="object-contain p-1" />
+              <div className="w-60 h-30 relative   overflow-hidden">
+                <Image src="/rkslogo.png" alt="RK's Brainstorm Logo" fill className="object-contain" />
               </div>
               <blockquote className="text-lg font-bold text-[#1B4F8C] italic leading-snug">
                 &ldquo;Our mission is to build scalable technology solutions and support client Business Units with dedicated tech talent and systems.&rdquo;

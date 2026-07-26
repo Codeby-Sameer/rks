@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  LayoutDashboard, 
-  CheckCircle2, 
-  ArrowRight, 
-  Database, 
-  Users2, 
-  LineChart, 
+import {
+  LayoutDashboard,
+  CheckCircle2,
+  ArrowRight,
+  Database,
+  Users2,
+  LineChart,
   Sparkles
 } from 'lucide-react';
 
@@ -37,11 +37,11 @@ const bmsModules = [
 export default function BMSPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Enterprise Business Management</span>
           </div>
@@ -66,7 +66,7 @@ export default function BMSPage() {
       {/* Info Card Panel */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#F7F8FA] rounded-3xl p-8 sm:p-12 border border-gray-200/80 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center card-fade">
-          
+
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 bg-[#1B4F8C]/10 px-3 py-1 rounded-full text-xs font-bold text-[#1B4F8C]">
               <span>Enterprise Resource & Project Engine</span>

@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  Briefcase, 
-  Target, 
-  Users, 
-  Search, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  Briefcase,
+  Target,
+  Users,
+  Search,
+  ArrowRight,
+  CheckCircle2,
   Sparkles
 } from 'lucide-react';
 
@@ -46,11 +46,11 @@ const consultingPillars = [
 export default function ConsultingPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Hero Header */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Enterprise IT Strategy & Talent</span>
           </div>
@@ -94,7 +94,7 @@ export default function ConsultingPage() {
             const Icon = pillar.icon;
             const anim = idx % 2 === 0 ? 'card-left' : 'card-right';
             return (
-              <div key={pillar.title} className={`${anim} bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all space-y-6`}>
+              <div key={pillar.title} className={`${anim} bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6`}>
                 <div className="flex items-center space-x-4">
                   <div className="w-14 h-14 rounded-2xl bg-[#0047AB]/10 text-[#0047AB] flex items-center justify-center shrink-0">
                     <Icon className="w-7 h-7" />

@@ -62,7 +62,7 @@ export default function AnnouncementBanner() {
 
   return (
     <div className="bg-[#1B4F8C] text-white text-xs sm:text-sm border-b border-white/10 overflow-hidden relative py-2 select-none z-50">
-      <div 
+      <div
         ref={containerRef}
         className="overflow-hidden whitespace-nowrap cursor-pointer"
         onMouseEnter={handleMouseEnter}
@@ -75,13 +75,13 @@ export default function AnnouncementBanner() {
               <span className="font-medium flex items-center gap-1.5">
                 {item.text}
               </span>
-              <Link 
+              <Link
                 href={item.href}
-                className="bg-[#0047AB] hover:bg-[#101585] text-white font-semibold text-xs px-2.5 py-0.5 rounded-full transition-all duration-200 inline-flex items-center gap-1 shadow-sm"
+                className="bg-white hover:bg-white/70 text-black font-semibold text-xs px-2.5 py-0.5 rounded-full transition-all duration-200 inline-flex items-center gap-1 shadow-sm"
               >
                 <span>{item.linkText}</span>
               </Link>
-              <span className="text-white/30 px-2">•</span>
+              <span className="text-white/90 px-2">•</span>
             </div>
           ))}
         </div>

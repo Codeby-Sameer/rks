@@ -34,13 +34,13 @@ export default function FloatingActions() {
   }, []);
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3 items-end pointer-events-auto"
+      className="fixed bottom-5 right-5 z-50 flex flex-col space-y-3 items-end pointer-events-auto"
     >
       {/* Q-Tran App Floating Button */}
       <div className="relative group flex items-center">
-        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md mr-3 whitespace-nowrap pointer-events-none">
+        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-900 text-white text-[10px] font-semibold px-2 py-1 rounded-lg shadow-md  whitespace-nowrap pointer-events-none">
           Get Q-Tran App
         </span>
         <Link
@@ -50,10 +50,10 @@ export default function FloatingActions() {
           aria-label="Get Q-Tran App"
         >
           <div className="relative w-full h-full rounded-full overflow-hidden">
-            <Image 
-              src="/q-tranlogo.jpg" 
-              alt="Q-Tran Logo" 
-              fill 
+            <Image
+              src="/q-tranlogo.jpg"
+              alt="Q-Tran Logo"
+              fill
               className="object-cover"
             />
           </div>
@@ -66,7 +66,7 @@ export default function FloatingActions() {
 
       {/* WhatsApp Floating Button */}
       <div className="relative group flex items-center">
-        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md mr-3 whitespace-nowrap pointer-events-none">
+        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-900 text-white text-[10px] font-semibold px-2 py-1 rounded-lg shadow-md  whitespace-nowrap pointer-events-none">
           Chat with us
         </span>
         <a

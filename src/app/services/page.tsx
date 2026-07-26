@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  Code2, 
-  Briefcase, 
-  Users, 
-  ArrowRight, 
-  CheckCircle2, 
-  Sparkles
+import {
+  Code2,
+  Briefcase,
+  Users,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  BookOpen
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -67,31 +68,48 @@ const serviceCards = [
     subtitleColor: 'text-[#2CA8A4]',
     anim: 'card-right',
   },
+  {
+    title: 'Corporate Training',
+    subtitle: 'Upskilling, Onboarding & Compliance',
+    desc: 'Structured technical, compliance, and soft skills training curriculums designed to optimize team productivity, ease new-hire adaptation, and deliver project-ready candidates.',
+    href: '/services/corporate-training',
+    icon: BookOpen,
+    features: [
+      'Train and Hire Sourcing Program',
+      'Structured Onboarding & Orientation',
+      'Ethics & Regulatory Compliance Training',
+      'Hard/Soft Skills & Product Knowledge',
+    ],
+    color: 'from-blue-500 to-[#1B4F8C]',
+    badgeBg: 'bg-[#1B4F8C]/10 text-[#1B4F8C]',
+    subtitleColor: 'text-[#1B4F8C]',
+    anim: 'card-fade-up',
+  },
 ];
 
 export default function ServicesPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Header Banner */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
             <Sparkles className="w-4 h-4" />
             <span>Our Core Capabilities</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black">
-            Software • Consulting • Outsourcing
+          <h1 className="text-3xl sm:text-5xl font-black">
+            Software • Consulting • Outsourcing • Training
           </h1>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-            Custom software engineering, IT consulting strategy, and managed tech outsourcing solutions designed to scale your technical capability.
+            Custom software engineering, IT consulting strategy, managed tech outsourcing, and curriculum-aligned corporate training models designed to scale your technical capability.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {serviceCards.map((service) => {
             const Icon = service.icon;
             return (

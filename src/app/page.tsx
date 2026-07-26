@@ -287,7 +287,6 @@ export default function HomePage() {
         {/* High Impact CTA Banner */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 card-zoom pb-10">
           <div className="bg-gradient-to-r from-[#0047AB] via-[#101585] to-[#1B4F8C] rounded-3xl p-10 sm:p-14 text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
 
             <div className="max-w-3xl space-y-6 relative z-10">
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">

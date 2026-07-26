@@ -15,7 +15,7 @@ import {
   Menu,
   X,
   ArrowRight,
-  Sparkles
+  BookOpen
 } from 'lucide-react';
 
 interface DropdownItem {
@@ -27,7 +27,7 @@ interface DropdownItem {
 const servicesItems: DropdownItem[] = [
   {
     title: 'Software Solutions',
-    href: '/services/training',
+    href: '/services/software',
     icon: Code2,
   },
   {
@@ -39,6 +39,11 @@ const servicesItems: DropdownItem[] = [
     title: 'IT Outsourcing',
     href: '/services/outsourcing',
     icon: Users,
+  },
+  {
+    title: 'Corporate Training',
+    href: '/services/corporate-training',
+    icon: BookOpen,
   },
 ];
 
@@ -59,6 +64,8 @@ export default function Header() {
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState<'services' | 'products' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   const servicesMenuRef = useRef<HTMLDivElement>(null);
   const productsMenuRef = useRef<HTMLDivElement>(null);
@@ -104,10 +111,14 @@ export default function Header() {
   }, []);
 
   // Close dropdown on route change
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     setActiveDropdown(null);
     setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
+    setMobileProductsOpen(false);
   }, [pathname]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs transition-all duration-300">
@@ -116,7 +127,7 @@ export default function Header() {
 
           {/* Brand Logo */}
           <Link href="/" className="flex items-center group py-1">
-            <div className="relative h-14 w-44 sm:w-52 group-hover:scale-105 transition-transform duration-300">
+            <div className="relative h-16 w-44  sm:w-52 group-hover:scale-105 transition-transform duration-300">
               <Image
                 src="/rkslogo.png"
                 alt="RK's Brainstorm - Quality | Transformation"
@@ -242,12 +253,20 @@ export default function Header() {
               )}
             </div>
 
-            <Link
+
+
+            {/* <Link
               href="/contact"
               className={`text-sm font-semibold transition-colors py-2 ${pathname === '/contact' ? 'text-[#1B4F8C] font-bold border-b-2 border-[#1B4F8C]' : 'text-gray-700 hover:text-[#1B4F8C]'
                 }`}
             >
               Contact Us
+            </Link> */}
+            <Link href="https://rksbrainstorm.myedusite.com/" target='_blank'
+              className={`text-sm font-semibold transition-colors py-2 ${pathname === '/q' ? 'text-[#1B4F8C] font-bold border-b-2 border-[#1B4F8C]' : 'text-gray-700 hover:text-[#1B4F8C]'
+                }`} >
+              Q-Tran
+
             </Link>
           </nav>
 
@@ -274,64 +293,88 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
-          <Link
-            href="/"
-            className="block py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C]"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="block py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C]"
-          >
-            About Us
-          </Link>
+      {
+        mobileMenuOpen && (
+          <div className="md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <Link
+              href="/"
+              className="block py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C]"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="block py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C]"
+            >
+              About Us
+            </Link>
 
-          <div className="space-y-1 pl-2 border-l-2 border-[#1B4F8C]/20 my-2">
-            <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider py-1">Services</span>
-            {servicesItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="block py-1.5 text-sm font-medium text-gray-700 hover:text-[#1B4F8C]"
+            {/* Services Dropdown */}
+            <div className="space-y-1">
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center justify-between w-full py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C] transition-colors"
               >
-                • {item.title}
-              </Link>
-            ))}
-          </div>
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180 text-[#1B4F8C]' : 'text-gray-500'}`} />
+              </button>
+              {mobileServicesOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-[#1B4F8C]/20 mt-1 mb-2">
+                  {servicesItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className="block py-2 text-sm font-medium text-gray-700 hover:text-[#1B4F8C]"
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
-          <div className="space-y-1 pl-2 border-l-2 border-[#101585]/20 my-2">
-            <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider py-1">Our Product</span>
-            {productItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="block py-1.5 text-sm font-medium text-gray-700 hover:text-[#101585]"
+            {/* Our Product Dropdown */}
+            <div className="space-y-1">
+              <button
+                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                className="flex items-center justify-between w-full py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C] transition-colors"
               >
-                • {item.title}
-              </Link>
-            ))}
-          </div>
+                <span>Our Product</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180 text-[#1B4F8C]' : 'text-gray-500'}`} />
+              </button>
+              {mobileProductsOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-[#101585]/20 mt-1 mb-2">
+                  {productItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className="block py-2 text-sm font-medium text-gray-700 hover:text-[#101585]"
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
-          <Link
+            {/* <Link
             href="/contact"
             className="block py-2 text-base font-semibold text-gray-800 hover:text-[#1B4F8C]"
           >
             Contact Us
-          </Link>
+          </Link> */}
 
-          <div className="pt-2">
-            <Link
-              href="/contact"
-              className="w-full bg-gradient-to-r from-[#0047AB] to-[#101585] text-white text-center font-bold px-4 py-3 rounded-xl block shadow-md"
-            >
-              Get In Touch
-            </Link>
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                className="w-full bg-gradient-to-r from-[#0047AB] to-[#101585] text-white text-center font-bold px-4 py-3 rounded-xl block shadow-md"
+              >
+                Get In Touch
+              </Link>
+            </div>
           </div>
-        </div>
-      )}
-    </header>
+        )
+      }
+    </header >
   );
 }

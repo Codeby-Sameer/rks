@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, ArrowRight, ShieldCheck, HeartHandshake } from 'lu
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black pt-16 pb-12 border-t border-white/10 relative overflow-hidden">
+    <footer className="bg-white text-black pt-16 pb-12 border-t border-black/10 relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block group">
               <div className="px-4 py-2 inline-block group-hover:scale-105 transition-transform duration-300">
-                <div className="relative h-12 w-48">
+                <div className="relative h-20 w-64">
                   <Image
                     src="/rkslogo.png"
                     alt="RK's Brainstorm Logo"
@@ -28,13 +28,13 @@ export default function Footer() {
               A premier software solutions, IT consulting, and managed outsourcing company. Empowering enterprises with custom technology, proprietary EdTech platforms, and high-caliber tech talent across India and global markets.
             </p>
             <div className="flex items-center space-x-4 pt-2">
-              <div className="flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-full text-blue-100">
-                <ShieldCheck className="w-4 h-4 text-slate-700" />
-                <span className='text-slate-700'>3+ Years Experience</span>
+              <div className="flex items-center space-x-2 text-xs bg-gradient-to-r from-[#0047AB] to-[#101585] px-3 py-1.5 rounded-full text-white">
+                <ShieldCheck className="w-4 h-4 text-white" />
+                <span className='text-white'>3+ Years Experience</span>
               </div>
-              <div className="flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-full text-blue-100">
-                <HeartHandshake className="w-4 h-4 text-slate-700" />
-                <span className='text-slate-700'>Global & Local Delivery</span>
+              <div className="flex items-center space-x-2 text-xs bg-gradient-to-r from-[#0047AB] to-[#101585] px-3 py-1.5 rounded-full text-white">
+                <HeartHandshake className="w-4 h-4 text-white" />
+                <span className='text-white'>Global & Local Delivery</span>
               </div>
             </div>
           </div>
@@ -120,18 +120,18 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-[#0047AB] text-slate-700 shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-slate-700">+91-8790008824</p>
-                  <p className="text-xs text-blue-200">+91-8790008825</p>
+                  <p className="font-semibold text-slate-700">+91-8790008825</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-slate-700 shrink-0" />
-                <a href="mailto:info@rksbrainstorm.com" className="hover:text-[#0047AB] text-slate-700 transition-colors">
+                <a href="mailto:info@rksbrainstorm.com" className="hover:text-[#0047AB] font-semibold text-slate-700 transition-colors">
                   info@rksbrainstorm.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-[#101585] shrink-0 mt-1" />
-                <p className="text-xs leading-relaxed text-blue-200">
+                <p className="font-semibold leading-relaxed text-slate-700">
                   Headquarters & Regional Corporate Hubs across India.
                 </p>
               </div>
@@ -147,10 +147,10 @@ export default function Footer() {
             <Link href="/sitemap.xml" className="hover:text-slate-700 transition-colors">
               Sitemap
             </Link>
-            <Link href="/contact" className="hover:text-slate-700 transition-colors">
+            <Link href="/privacy" className="hover:text-slate-700 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="hover:text-slate-700 transition-colors">
+            <Link href="/terms" className="hover:text-slate-700 transition-colors">
               Terms of Service
             </Link>
           </div>

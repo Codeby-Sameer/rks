@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <div className="space-y-20 pb-20 overflow-hidden">
-      
+
       {/* Header */}
       <section className="bg-gradient-to-br from-[#1B4F8C] via-[#163f70] to-[#2CA8A4] text-white py-20 text-center space-y-4">
-        <div className="inline-flex items-center space-x-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
+        <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#0047AB]">
           <Sparkles className="w-4 h-4" />
           <span>Proprietary Tech Innovations</span>
         </div>
@@ -27,7 +27,7 @@ export default function ProductsPage() {
       {/* Products Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          
+
           {/* Q-Tran Card */}
           <div className="card-left bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
             <div className="space-y-4">
