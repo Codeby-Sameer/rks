@@ -75,6 +75,7 @@ export default function HorizonHeroClient() {
       refs.renderer.toneMapping = THREE.ACESFilmicToneMapping;
       refs.renderer.toneMappingExposure = 0.5;
 
+      console.log(refs.renderer.capabilities);
       // Post-processing
       refs.composer = new EffectComposer(refs.renderer);
       const renderPass = new RenderPass(refs.scene, refs.camera);
@@ -166,7 +167,7 @@ export default function HorizonHeroClient() {
               vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
               
               if (mvPosition.z >= 0.0) {
-                gl_PointSize = 0.0;
+               gl_PointSize = 30.0;
               } else {
                 gl_PointSize = size * (300.0 / -mvPosition.z);
                 gl_PointSize = clamp(gl_PointSize, 0.0, 100.0);
@@ -181,7 +182,6 @@ export default function HorizonHeroClient() {
             void main() {
               float dist = length(gl_PointCoord - vec2(0.5));
               if (dist > 0.5) discard;
-              
               float opacity = 1.0 - smoothstep(0.0, 0.5, dist);
               gl_FragColor = vec4(vColor, opacity);
             }
