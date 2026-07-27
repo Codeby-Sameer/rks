@@ -55,6 +55,8 @@ export default function FloatingActions() {
               alt="Q-Tran Logo"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
             />
           </div>
           <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 z-10">

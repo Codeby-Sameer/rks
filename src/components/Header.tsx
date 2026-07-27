@@ -131,6 +131,7 @@ export default function Header() {
               <Image
                 src="/rkslogo.png"
                 alt="RK's Brainstorm - Quality | Transformation"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill
                 className="object-contain object-left"
                 priority
@@ -233,7 +234,10 @@ export default function Header() {
                         >
                           <div className="w-9 h-9 rounded-lg bg-white border border-gray-100 shadow-xs flex items-center justify-center shrink-0 mt-0.5 relative overflow-hidden">
                             {isQTran ? (
-                              <Image src="/q-tranlogo.jpg" alt="Q-Tran Logo" fill className="object-cover" />
+                              <Image src="/q-tranlogo.jpg" alt="Q-Tran Logo" fill className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+                              />
                             ) : (
                               <Icon className="w-5 h-5 text-[#1B4F8C]" />
                             )}

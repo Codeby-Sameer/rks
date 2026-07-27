@@ -86,7 +86,7 @@ export default function HorizonHeroClient() {
 
       // Create scene elements
       createStarField();
-      createNebula();
+      // createNebula();
       createMountains();
       createAtmosphere();
       getLocation();
