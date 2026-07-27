@@ -18,7 +18,7 @@ export default function HorizonHeroClient() {
   const scrollProgressRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const smoothCameraPos = useRef({ x: 0, y: 30, z: 300 });
+  const smoothCameraPos = useRef({ x: 0, y: 20, z: 100 });
 
   const [scrollProgress, setScrollProgress] = useState(0);
   const [currentSection, setCurrentSection] = useState(0);
@@ -46,6 +46,10 @@ export default function HorizonHeroClient() {
     if (!canvasRef.current) return;
 
     const initThree = () => {
+      // Detect mobile/tablet/touch device to bypass buggy/expensive post-processing
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+      refs.isMobile = isMobile;
+
       // Scene setup
       refs.scene = new THREE.Scene();
       refs.scene.fog = new THREE.FogExp2(0x000000, 0.00025);
@@ -57,8 +61,8 @@ export default function HorizonHeroClient() {
         0.1,
         2000
       );
-      refs.camera.position.z = 300;
-      refs.camera.position.y = 30;
+      refs.camera.position.z = 100;
+      refs.camera.position.y = 20;
 
       // Renderer
       refs.renderer = new THREE.WebGLRenderer({
@@ -86,7 +90,7 @@ export default function HorizonHeroClient() {
 
       // Create scene elements
       createStarField();
-      // createNebula();
+      createNebula();
       createMountains();
       createAtmosphere();
       getLocation();
@@ -141,20 +145,21 @@ export default function HorizonHeroClient() {
         const material = new THREE.ShaderMaterial({
           uniforms: {
             time: { value: 0 },
-            depth: { value: { value: i } }
+            depth: { value: i }
           },
           vertexShader: `
             attribute float size;
             attribute vec3 color;
             varying vec3 vColor;
             uniform float time;
+            uniform float depth;
             
             void main() {
               vColor = color;
               vec3 pos = position;
               
-              // Slow rotation
-              float angle = time * 0.02;
+              // Slow rotation based on depth
+              float angle = time * 0.05 * (1.0 - depth * 0.3);
               mat2 rot = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
               pos.xy = rot * pos.xy;
               
@@ -304,7 +309,11 @@ export default function HorizonHeroClient() {
           uniform float time;
           
           void main() {
-            float intensity = pow(0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
+            // Safe Fresnel calculation avoiding pow(negative, exponent) which is undefined in GLSL on mobile GPUs
+            float rawIntensity = 0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0));
+            float clampedIntensity = max(0.0, rawIntensity);
+            float intensity = clampedIntensity * clampedIntensity;
+            
             vec3 atmosphere = vec3(0.1, 0.3, 0.6) * intensity;
             
             float pulse = sin(time * 2.0) * 0.1 + 0.9;
@@ -366,8 +375,10 @@ export default function HorizonHeroClient() {
         mountain.position.y = 50 + (Math.cos(time * 0.15) * 1 * parallaxFactor);
       });
 
-      if (refs.composer) {
+      if (refs.composer && !refs.isMobile) {
         refs.composer.render();
+      } else if (refs.renderer && refs.scene && refs.camera) {
+        refs.renderer.render(refs.scene, refs.camera);
       }
     };
 
