@@ -44,19 +44,7 @@ export default function HorizonHeroClient() {
   // Initialize Three.js
   useEffect(() => {
     const { current: refs } = threeRefs;
-    const gl = refs.renderer.getContext();
 
-    console.log("WebGL Version:", gl.getParameter(gl.VERSION));
-    console.log("Renderer:", gl.getParameter(gl.RENDERER));
-    console.log("Vendor:", gl.getParameter(gl.VENDOR));
-    console.log("Point Size:", gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE));
-
-    const high = gl.getShaderPrecisionFormat(
-      gl.FRAGMENT_SHADER,
-      gl.HIGH_FLOAT
-    );
-
-    console.log("High Precision:", high.precision);
     if (!canvasRef.current) return;
 
     const initThree = () => {
