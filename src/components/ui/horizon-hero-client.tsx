@@ -164,7 +164,14 @@ export default function HorizonHeroClient() {
               pos.xy = rot * pos.xy;
               
               vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-              gl_PointSize = size * (300.0 / -mvPosition.z);
+              
+              if (mvPosition.z >= 0.0) {
+                gl_PointSize = 0.0;
+              } else {
+                gl_PointSize = size * (300.0 / -mvPosition.z);
+                gl_PointSize = clamp(gl_PointSize, 0.0, 100.0);
+              }
+              
               gl_Position = projectionMatrix * mvPosition;
             }
           `,
